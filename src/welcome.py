@@ -10,7 +10,7 @@ def welcome(root, mainframe):
     feet_entry.grid(column=2, row=2, sticky=(W, E))
 
     ttk.Button(mainframe, text="Button", command=print("Hello, World!")).grid(
-        column=3, row=3, sticky=W
+        column=3, row=3, sticky=(S, E)
     )
 
     root.columnconfigure(0, weight=1)
