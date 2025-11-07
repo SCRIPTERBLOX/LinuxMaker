@@ -2,6 +2,9 @@ from tkinter import *
 from tkinter import ttk
 
 
+def hy(*args):
+    print("Hello, World!")
+
 def welcome(root, mainframe):
     ttk.Label(mainframe, text="Hello there").grid(column=3, row=1, sticky=N)
 
@@ -9,7 +12,7 @@ def welcome(root, mainframe):
     feet_entry = ttk.Entry(mainframe, width=7, textvariable=feet)
     feet_entry.grid(column=2, row=2, sticky=(W, E))
 
-    ttk.Button(mainframe, text="Button", command=print("Hello, World!")).grid(
+    ttk.Button(mainframe, text="Button", command=hy).grid(
         column=3, row=3, sticky=(S, E)
     )
 
@@ -20,4 +23,4 @@ def welcome(root, mainframe):
         child.grid_configure(padx=5, pady=5)
 
     feet_entry.focus()
-    root.bind("<Return>", print("Hello, World!"))
+    root.bind("<Return>", hy)
